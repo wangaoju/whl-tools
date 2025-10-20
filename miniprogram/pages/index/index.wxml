@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="title">你好，欢迎使用小程序模板</view>
+  <view class="subtitle">设备：{{device || '未知'}}</view>
+  <button type="primary" bindtap="goToAbout">查看关于</button>
+</view>

@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="title">关于本模板</view>
+  <view class="desc">• 使用微信小程序原生技术栈（WXML/WXSS/JS/JSON）</view>
+  <view class="desc">• 可直接在微信开发者工具导入运行</view>
+  <button bindtap="goBack">返回</button>
+</view>

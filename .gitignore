@@ -1,0 +1,19 @@
+# WeChat Mini Program
+miniprogram_npm/
+node_modules/
+dist/
+build/
+.tmp/
+.DS_Store
+.project
+.project.config.json.backup
+project.private.config.json
+
+# IDE/editor
+.idea/
+.vscode/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

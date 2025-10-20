@@ -1,0 +1,16 @@
+{
+  "description": "项目配置文件。由微信开发者工具读取",
+  "packOptions": { "ignore": [] },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.33.0",
+  "appid": "touristappid",
+  "projectname": "wechat-miniprogram-template",
+  "miniprogramRoot": "miniprogram/"
+}

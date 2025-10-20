@@ -1,0 +1,46 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors/IDE
+.idea/
+.vscode/
+*.iml
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env
+.env
+.env.*
+
+# Node/Build
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+
+# Output
+build/
+dist/
+release/
+debug/
+coverage/
+
+# Cocos Creator (常见缓存与本地目录)
+temp/
+library/
+local/
+
+# WeChat Mini Program / Mini Game
+miniprogram_npm/
+project.private.config.json
+wechat_devtools/
+
+# Misc
+*.tmp
+*.swp
+*.swo

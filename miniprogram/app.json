@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about"
+  ],
+  "window": {
+    "navigationBarTitleText": "小程序模板",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "light"
+  },
+  "sitemapLocation": "sitemap.json"
+}

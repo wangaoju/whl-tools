@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>天气卡片 · OpenWeatherMap</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="toolbar">
+      <input id="cityInput" class="city-input" type="text" placeholder="输入城市，如：北京" aria-label="城市名称" autocomplete="off" />
+      <div class="toolbar-actions">
+        <button id="refreshBtn" class="icon-btn" aria-label="刷新天气" title="刷新">⟳</button>
+        <button id="themeToggle" class="icon-btn" aria-label="切换主题" title="浅色/深色">
+          <span class="icon-sun" aria-hidden="true">☀️</span>
+          <span class="icon-moon" aria-hidden="true">🌙</span>
+        </button>
+        <button id="settingsBtn" class="icon-btn" aria-label="设置 API Key" title="设置">⚙️</button>
+      </div>
+    </header>
+
+    <section id="alertArea" class="alert hidden" role="status" aria-live="polite"></section>
+
+    <section class="card" id="weatherCard" aria-busy="false">
+      <div id="loading" class="loading hidden" aria-hidden="true">
+        <div class="spinner" aria-label="加载中"></div>
+      </div>
+
+      <div id="weatherContent" class="content hidden">
+        <div class="card-head">
+          <h2 id="cityName" class="city">--</h2>
+          <time id="updatedAt" class="updated" datetime="">--</time>
+        </div>
+
+        <div class="main">
+          <img id="weatherIcon" class="icon" alt="" src="" width="90" height="90" />
+          <div class="main-right">
+            <div class="temp"><span id="temp">--</span><span class="unit">°C</span></div>
+            <div id="desc" class="desc">--</div>
+          </div>
+        </div>
+
+        <div class="details">
+          <div class="item"><span class="label">体感</span><span class="value"><span id="feelsLike">--</span>°C</span></div>
+          <div class="item"><span class="label">最高</span><span class="value"><span id="tempMax">--</span>°C</span></div>
+          <div class="item"><span class="label">最低</span><span class="value"><span id="tempMin">--</span>°C</span></div>
+          <div class="item"><span class="label">湿度</span><span class="value"><span id="humidity">--</span>%</span></div>
+          <div class="item"><span class="label">风速</span><span class="value"><span id="wind">--</span>m/s</span></div>
+        </div>
+
+        <div class="actions">
+          <button id="retryBtn" class="text-btn hidden">重试</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footnote">
+      <small>数据来源：OpenWeatherMap · 单位：摄氏度 · 语言：中文</small>
+    </footer>
+  </div>
+
+  <dialog id="settingsDialog" class="dialog">
+    <form id="settingsForm" method="dialog">
+      <h3>设置 OpenWeatherMap API Key</h3>
+      <p>首次使用请在 <a href="https://home.openweathermap.org/api_keys" target="_blank" rel="noreferrer">OpenWeatherMap 个人中心</a> 创建 API Key，并填入下方。此 Key 将仅保存在您的本地浏览器中。</p>
+      <label class="field">
+        <span>API Key</span>
+        <input id="apiKeyInput" type="text" placeholder="粘贴你的 API Key" autocomplete="off" />
+      </label>
+      <div class="dialog-actions">
+        <button type="submit" id="saveApiKeyBtn" class="primary">保存</button>
+        <button type="button" id="closeSettingsBtn">关闭</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="./script.js"></script>
+</body>
+</html>
